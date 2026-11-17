@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out forwards;
+}
+
+@keyframes heartbeat-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.3));
+    transform: scale(1);
+  }
+
+  15% {
+    filter: drop-shadow(0 0 12px rgba(37, 99, 235, 0.9));
+    transform: scale(1.04);
+  }
+
+  30% {
+    filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.3));
+    transform: scale(1);
+  }
+
+  45% {
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.7));
+    transform: scale(1.03);
+  }
+}
+
+.heartbeat-glow {
+  animation: heartbeat-glow 2s ease-in-out infinite;
+}
